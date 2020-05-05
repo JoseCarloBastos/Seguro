@@ -24,6 +24,8 @@ public class Principal extends javax.swing.JFrame implements Serializable, Runna
 
     private ClienteController controlador;
     private int indexEditar = -1;
+    private String hora, minutos, segundos, ampm, dia, mes, anno;
+    private Thread h1;
 
     /**
      * Creates new form Principal
@@ -42,9 +44,6 @@ public class Principal extends javax.swing.JFrame implements Serializable, Runna
         h1 = new Thread(this);
         h1.start();
     }
-
-    private String hora, minutos, segundos, ampm, dia, mes, anno;
-    Thread h1;
 
     public void run() {
         Thread ct = Thread.currentThread();
