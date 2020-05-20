@@ -5,7 +5,6 @@
  */
 package controllers;
 
-import java.awt.event.KeyEvent;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
@@ -134,6 +133,21 @@ public class ClienteController {
             modelo.addRow(datos);
         }
         return modelo;
+    }
+    
+    public String generadorTextoPDF(Cliente cliente) {
+        String texto = "";
+        texto += "Nombre: " + cliente.getNombre() + "\n";
+        texto += "Fecha de nacimiento: " + cliente.getFech_nacimiento()+ "\n";
+        texto += "Sexo: " + cliente.getSexo()+ "\n";
+        texto += "Telefono: " + cliente.getTelefono()+ "\n";
+        texto += "Direccion: " + cliente.getDireccion()+ "\n";
+        texto += "Ciudad: " + cliente.getCiudad()+ "\n";
+        texto += "Estado: " + cliente.getEstado()+ "\n";
+        texto += "Zip Code: " + cliente.getZip_code()+ "\n";
+        texto += "Estado Civil: " + cliente.getEstado_civil()+ "\n";
+        texto += "Cantidad de hijos: " + cliente.getHijos()+ "\n";
+        return texto;
     }
     
     public void eliminarCliente(int index) {

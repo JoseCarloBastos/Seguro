@@ -5,6 +5,9 @@
  */
 package views;
 
+import com.itextpdf.text.Document;
+import com.itextpdf.text.Paragraph;
+import com.itextpdf.text.pdf.PdfWriter;
 import controllers.ClienteController;
 import java.awt.Toolkit;
 import java.awt.event.KeyEvent;
@@ -12,6 +15,7 @@ import java.io.*;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
+import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 import modules.Cliente;
@@ -906,10 +910,25 @@ public class Principal extends javax.swing.JFrame implements Serializable, Runna
         jScrollPane4.setViewportView(jTextArea1);
 
         jButton11.setText("Buscar");
+        jButton11.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton11ActionPerformed(evt);
+            }
+        });
 
         jButton12.setText("Cancelar");
+        jButton12.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton12ActionPerformed(evt);
+            }
+        });
 
         jButton13.setText("Aceptar");
+        jButton13.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton13ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout SalidaPDFLayout = new javax.swing.GroupLayout(SalidaPDF.getContentPane());
         SalidaPDF.getContentPane().setLayout(SalidaPDFLayout);
@@ -1671,6 +1690,7 @@ public class Principal extends javax.swing.JFrame implements Serializable, Runna
             }
             PDFCliente = controlador.getClientes().get(index);
             SalidaPDF.setLocationRelativeTo(this);
+            jTextArea1.setText(controlador.generadorTextoPDF(PDFCliente));
             SalidaPDF.setVisible(true);
 //            actualizarTablaAtencionCliente();
 //            actualizarTablaCliente();
@@ -1678,6 +1698,43 @@ public class Principal extends javax.swing.JFrame implements Serializable, Runna
             System.out.println("Debe seleccionar una fila");
         }
     }//GEN-LAST:event_jButton10ActionPerformed
+
+    private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
+        // TODO add your handling code here:
+        JFileChooser dlg = new JFileChooser();
+        int option = dlg.showSaveDialog(this);
+        if (option == JFileChooser.APPROVE_OPTION) {
+            File f = dlg.getSelectedFile();
+            jTextField28.setText(f.toString());
+        }
+    }//GEN-LAST:event_jButton11ActionPerformed
+
+    private void jButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton13ActionPerformed
+        // TODO add your handling code here:
+        String ruta = jTextField28.getText();
+        String contenido = jTextArea1.getText();
+        try {
+            FileOutputStream archivo = new FileOutputStream(ruta + ".pdf");
+            Document doc = new Document();
+            PdfWriter.getInstance(doc, archivo);
+            doc.open();
+            doc.add(new Paragraph(contenido));
+            doc.close();
+            JOptionPane.showMessageDialog(null, "Archivo creado correctramente");
+            jTextField28.setText("");
+            jTextArea1.setText("");
+            SalidaPDF.setVisible(false);
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Ha ocurrido un error, no se pudo crear el archivo");
+        }
+    }//GEN-LAST:event_jButton13ActionPerformed
+
+    private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
+        // TODO add your handling code here:
+        jTextField28.setText("");
+        jTextArea1.setText("");
+        SalidaPDF.setVisible(false);
+    }//GEN-LAST:event_jButton12ActionPerformed
 
     private void limpiarDatos() {
         jTextField2.setText("");
