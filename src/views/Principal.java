@@ -240,6 +240,13 @@ public class Principal extends javax.swing.JFrame implements Serializable, Runna
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         Sexo = new javax.swing.ButtonGroup();
+        SalidaPDF = new javax.swing.JFrame();
+        jScrollPane4 = new javax.swing.JScrollPane();
+        jTextArea1 = new javax.swing.JTextArea();
+        jTextField28 = new javax.swing.JTextField();
+        jButton11 = new javax.swing.JButton();
+        jButton12 = new javax.swing.JButton();
+        jButton13 = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
@@ -254,6 +261,7 @@ public class Principal extends javax.swing.JFrame implements Serializable, Runna
         jLabel39 = new javax.swing.JLabel();
         jTextField27 = new javax.swing.JTextField();
         jButton9 = new javax.swing.JButton();
+        jButton10 = new javax.swing.JButton();
         jScrollPane3 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
         jPanel9 = new javax.swing.JPanel();
@@ -891,6 +899,53 @@ public class Principal extends javax.swing.JFrame implements Serializable, Runna
                 .addContainerGap(79, Short.MAX_VALUE))
         );
 
+        SalidaPDF.setSize(new java.awt.Dimension(645, 664));
+
+        jTextArea1.setColumns(20);
+        jTextArea1.setRows(5);
+        jScrollPane4.setViewportView(jTextArea1);
+
+        jButton11.setText("Buscar");
+
+        jButton12.setText("Cancelar");
+
+        jButton13.setText("Aceptar");
+
+        javax.swing.GroupLayout SalidaPDFLayout = new javax.swing.GroupLayout(SalidaPDF.getContentPane());
+        SalidaPDF.getContentPane().setLayout(SalidaPDFLayout);
+        SalidaPDFLayout.setHorizontalGroup(
+            SalidaPDFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(SalidaPDFLayout.createSequentialGroup()
+                .addGap(44, 44, 44)
+                .addGroup(SalidaPDFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(SalidaPDFLayout.createSequentialGroup()
+                        .addComponent(jButton13)
+                        .addGap(55, 55, 55)
+                        .addComponent(jButton12))
+                    .addGroup(SalidaPDFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 548, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(SalidaPDFLayout.createSequentialGroup()
+                            .addComponent(jTextField28, javax.swing.GroupLayout.PREFERRED_SIZE, 440, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(18, 18, 18)
+                            .addComponent(jButton11, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(53, Short.MAX_VALUE))
+        );
+        SalidaPDFLayout.setVerticalGroup(
+            SalidaPDFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(SalidaPDFLayout.createSequentialGroup()
+                .addGap(32, 32, 32)
+                .addGroup(SalidaPDFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jTextField28, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton11))
+                .addGap(26, 26, 26)
+                .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 436, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(34, 34, 34)
+                .addGroup(SalidaPDFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton12)
+                    .addComponent(jButton13))
+                .addContainerGap(90, Short.MAX_VALUE))
+        );
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setSize(new java.awt.Dimension(1920, 1080));
 
@@ -963,6 +1018,14 @@ public class Principal extends javax.swing.JFrame implements Serializable, Runna
             }
         });
 
+        jButton10.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jButton10.setText("PDF");
+        jButton10.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton10ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
         jPanel8.setLayout(jPanel8Layout);
         jPanel8Layout.setHorizontalGroup(
@@ -984,6 +1047,10 @@ public class Principal extends javax.swing.JFrame implements Serializable, Runna
                     .addComponent(jLabel37)
                     .addComponent(jTextField25, javax.swing.GroupLayout.PREFERRED_SIZE, 197, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel8Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jButton10, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(159, 159, 159))
         );
         jPanel8Layout.setVerticalGroup(
             jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1006,7 +1073,9 @@ public class Principal extends javax.swing.JFrame implements Serializable, Runna
                 .addComponent(jTextField27, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jButton9)
-                .addContainerGap(217, Short.MAX_VALUE))
+                .addGap(92, 92, 92)
+                .addComponent(jButton10, javax.swing.GroupLayout.DEFAULT_SIZE, 49, Short.MAX_VALUE)
+                .addGap(76, 76, 76))
         );
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
@@ -1591,6 +1660,25 @@ public class Principal extends javax.swing.JFrame implements Serializable, Runna
         }
     }//GEN-LAST:event_jButton9ActionPerformed
 
+    Cliente PDFCliente = new Cliente();
+    
+    private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
+        // TODO add your handling code here:
+        if (jTable1.getSelectedRow() >= 0) {
+            int index = jTable1.getSelectedRow();
+            if (!jTextField1.getText().equals("")) {
+                index = controlador.getClientes().indexOf(controlador.getClientesBusqueda().get(jTable1.getSelectedRow()));
+            }
+            PDFCliente = controlador.getClientes().get(index);
+            SalidaPDF.setLocationRelativeTo(this);
+            SalidaPDF.setVisible(true);
+//            actualizarTablaAtencionCliente();
+//            actualizarTablaCliente();
+        } else {
+            System.out.println("Debe seleccionar una fila");
+        }
+    }//GEN-LAST:event_jButton10ActionPerformed
+
     private void limpiarDatos() {
         jTextField2.setText("");
         jTextField3.setText("");
@@ -1712,9 +1800,14 @@ public class Principal extends javax.swing.JFrame implements Serializable, Runna
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JFrame Cliente;
+    private javax.swing.JFrame SalidaPDF;
     private javax.swing.ButtonGroup Sexo;
     private javax.swing.JFrame federalPoverty;
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton10;
+    private javax.swing.JButton jButton11;
+    private javax.swing.JButton jButton12;
+    private javax.swing.JButton jButton13;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
@@ -1793,9 +1886,11 @@ public class Principal extends javax.swing.JFrame implements Serializable, Runna
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JTable jTable1;
     private javax.swing.JTable jTable2;
     private javax.swing.JTable jTable3;
+    private javax.swing.JTextArea jTextArea1;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField10;
     private javax.swing.JTextField jTextField11;
@@ -1816,6 +1911,7 @@ public class Principal extends javax.swing.JFrame implements Serializable, Runna
     private javax.swing.JTextField jTextField25;
     private javax.swing.JTextField jTextField26;
     private javax.swing.JTextField jTextField27;
+    private javax.swing.JTextField jTextField28;
     private javax.swing.JTextField jTextField3;
     private javax.swing.JTextField jTextField4;
     private javax.swing.JTextField jTextField5;
