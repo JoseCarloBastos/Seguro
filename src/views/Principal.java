@@ -360,7 +360,7 @@ public class Principal extends javax.swing.JFrame implements Serializable, Runna
         jTextField2.setToolTipText("");
         jTextField2.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
-                jTextField2KeyTyped(evt);
+                soloLetras(evt);
             }
         });
 
@@ -375,7 +375,7 @@ public class Principal extends javax.swing.JFrame implements Serializable, Runna
 
         jTextField4.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
-                jTextField4KeyTyped(evt);
+                soloNumeros(evt);
             }
         });
 
@@ -387,7 +387,7 @@ public class Principal extends javax.swing.JFrame implements Serializable, Runna
 
         jTextField5.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
-                jTextField5KeyTyped(evt);
+                soloNumeros(evt);
             }
         });
 
@@ -399,7 +399,7 @@ public class Principal extends javax.swing.JFrame implements Serializable, Runna
 
         jTextField7.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
-                jTextField7KeyTyped(evt);
+                soloLetras(evt);
             }
         });
 
@@ -411,7 +411,7 @@ public class Principal extends javax.swing.JFrame implements Serializable, Runna
 
         jTextField8.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
-                jTextField8KeyTyped(evt);
+                soloLetras(evt);
             }
         });
 
@@ -420,7 +420,7 @@ public class Principal extends javax.swing.JFrame implements Serializable, Runna
 
         jTextField9.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
-                jTextField9KeyTyped(evt);
+                soloNumeros(evt);
             }
         });
 
@@ -535,7 +535,7 @@ public class Principal extends javax.swing.JFrame implements Serializable, Runna
 
         jTextField11.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
-                jTextField11KeyTyped(evt);
+                soloNumeros(evt);
             }
         });
 
@@ -544,7 +544,7 @@ public class Principal extends javax.swing.JFrame implements Serializable, Runna
 
         jTextField12.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
-                jTextField12KeyTyped(evt);
+                soloNumeros(evt);
             }
         });
 
@@ -562,7 +562,7 @@ public class Principal extends javax.swing.JFrame implements Serializable, Runna
 
         jTextField16.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
-                jTextField16KeyTyped(evt);
+                soloNumeros(evt);
             }
         });
 
@@ -641,7 +641,7 @@ public class Principal extends javax.swing.JFrame implements Serializable, Runna
 
         jTextField17.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
-                jTextField17KeyTyped(evt);
+                soloNumeros(evt);
             }
         });
 
@@ -682,7 +682,7 @@ public class Principal extends javax.swing.JFrame implements Serializable, Runna
 
         jTextField19.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
-                jTextField19KeyTyped(evt);
+                soloNumeros(evt);
             }
         });
 
@@ -732,7 +732,7 @@ public class Principal extends javax.swing.JFrame implements Serializable, Runna
 
         jTextField18.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
-                jTextField18KeyTyped(evt);
+                soloNumeros(evt);
             }
         });
 
@@ -741,7 +741,7 @@ public class Principal extends javax.swing.JFrame implements Serializable, Runna
 
         jTextField20.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
-                jTextField20KeyTyped(evt);
+                soloNumeros(evt);
             }
         });
 
@@ -755,7 +755,7 @@ public class Principal extends javax.swing.JFrame implements Serializable, Runna
 
         jTextField21.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
-                jTextField21KeyTyped(evt);
+                soloNumeros(evt);
             }
         });
 
@@ -764,7 +764,7 @@ public class Principal extends javax.swing.JFrame implements Serializable, Runna
 
         jTextField22.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
-                jTextField22KeyTyped(evt);
+                soloNumeros(evt);
             }
         });
 
@@ -975,6 +975,11 @@ public class Principal extends javax.swing.JFrame implements Serializable, Runna
 
         jLabel1.setText("Busqueda rapida:");
 
+        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField1ActionPerformed(evt);
+            }
+        });
         jTextField1.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 jTextField1KeyReleased(evt);
@@ -1039,6 +1044,7 @@ public class Principal extends javax.swing.JFrame implements Serializable, Runna
 
         jButton10.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jButton10.setText("PDF");
+        jButton10.setPreferredSize(new java.awt.Dimension(77, 31));
         jButton10.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton10ActionPerformed(evt);
@@ -1049,14 +1055,8 @@ public class Principal extends javax.swing.JFrame implements Serializable, Runna
         jPanel8.setLayout(jPanel8Layout);
         jPanel8Layout.setHorizontalGroup(
             jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel8Layout.createSequentialGroup()
-                .addContainerGap(59, Short.MAX_VALUE)
-                .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 61, Short.MAX_VALUE)
-                .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(53, 53, 53))
-            .addGroup(jPanel8Layout.createSequentialGroup()
-                .addGap(41, 41, 41)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel8Layout.createSequentialGroup()
+                .addGap(19, 19, 19)
                 .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jButton9)
                     .addComponent(jLabel39)
@@ -1065,36 +1065,39 @@ public class Principal extends javax.swing.JFrame implements Serializable, Runna
                     .addComponent(jTextField26, javax.swing.GroupLayout.PREFERRED_SIZE, 197, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel37)
                     .addComponent(jTextField25, javax.swing.GroupLayout.PREFERRED_SIZE, 197, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel8Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton10, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(159, 159, 159))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jButton10, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(53, 53, 53))
         );
         jPanel8Layout.setVerticalGroup(
             jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel8Layout.createSequentialGroup()
                 .addGap(14, 14, 14)
-                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jButton4, javax.swing.GroupLayout.DEFAULT_SIZE, 49, Short.MAX_VALUE)
-                    .addComponent(jButton5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(115, 115, 115)
-                .addComponent(jLabel37)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTextField25, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jLabel38)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTextField26, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jLabel39)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTextField27, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jButton9)
-                .addGap(92, 92, 92)
-                .addComponent(jButton10, javax.swing.GroupLayout.DEFAULT_SIZE, 49, Short.MAX_VALUE)
-                .addGap(76, 76, 76))
+                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel8Layout.createSequentialGroup()
+                        .addComponent(jLabel37)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jTextField25, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jLabel38)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jTextField26, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jLabel39)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jTextField27, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jButton9))
+                    .addGroup(jPanel8Layout.createSequentialGroup()
+                        .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(32, 32, 32)
+                        .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(39, 39, 39)
+                        .addComponent(jButton10, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
@@ -1110,11 +1113,6 @@ public class Principal extends javax.swing.JFrame implements Serializable, Runna
         jTable1.setOpaque(false);
         jTable1.setRowHeight(20);
         jTable1.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
-        jTable1.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseReleased(java.awt.event.MouseEvent evt) {
-                jTable1MouseReleased(evt);
-            }
-        });
         jScrollPane3.setViewportView(jTable1);
         jTable1.getColumnModel().getSelectionModel().setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
         if (jTable1.getColumnModel().getColumnCount() > 0) {
@@ -1182,18 +1180,19 @@ public class Principal extends javax.swing.JFrame implements Serializable, Runna
         jPanel9Layout.setHorizontalGroup(
             jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel9Layout.createSequentialGroup()
-                .addContainerGap()
                 .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel9Layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
+                    .addGroup(jPanel9Layout.createSequentialGroup()
+                        .addContainerGap(1570, Short.MAX_VALUE)
                         .addComponent(jButton8)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jButton7)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jButton6)
                         .addGap(18, 18, 18)
-                        .addComponent(jButton1)))
+                        .addComponent(jButton1))
+                    .addGroup(jPanel9Layout.createSequentialGroup()
+                        .addGap(60, 60, 60)
+                        .addComponent(jScrollPane1)))
                 .addContainerGap())
         );
         jPanel9Layout.setVerticalGroup(
@@ -1261,7 +1260,7 @@ public class Principal extends javax.swing.JFrame implements Serializable, Runna
                         .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jPanel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addComponent(jScrollPane3))
+                    .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 649, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -1486,7 +1485,7 @@ public class Principal extends javax.swing.JFrame implements Serializable, Runna
             actualizarTablaAtencionCliente();
             actualizarTablaCliente();
         } else {
-            System.out.println("Debe seleccionar una fila");
+            JOptionPane.showMessageDialog(null,"Debe seleccionar algun elemento en la lista", "Accion no permitida", 2, null);
         }
     }//GEN-LAST:event_jButton4ActionPerformed
 
@@ -1502,16 +1501,10 @@ public class Principal extends javax.swing.JFrame implements Serializable, Runna
             }
             actualizarTablaAtencionCliente();
             actualizarTablaCliente();
+        } else {
+            JOptionPane.showMessageDialog(null,"Debe seleccionar algun elemento en la lista", "Accion no permitida", 2, null);
         }
     }//GEN-LAST:event_jButton5ActionPerformed
-
-    private void jTextField1KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField1KeyReleased
-        // TODO add your handling code here:
-        String criterio = jTextField1.getText();
-        controlador.buscar(criterio.toLowerCase());
-        actualizarTablaAtencionClienteBusqueda();
-        actualizarTablaClienteBusqueda();
-    }//GEN-LAST:event_jTextField1KeyReleased
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
@@ -1545,7 +1538,7 @@ public class Principal extends javax.swing.JFrame implements Serializable, Runna
             actualizarTablaAtencionCliente();
             actualizarTablaCliente();
         } else {
-            System.out.println("Debe seleccionar una fila");
+            JOptionPane.showMessageDialog(null,"Debe seleccionar algun elemento en la lista", "Accion no permitida", 2, null);
         }
     }//GEN-LAST:event_jButton7ActionPerformed
 
@@ -1561,100 +1554,28 @@ public class Principal extends javax.swing.JFrame implements Serializable, Runna
             }
             actualizarTablaAtencionCliente();
             actualizarTablaCliente();
+        } else {
+            JOptionPane.showMessageDialog(null,"Debe seleccionar algun elemento en la lista", "Accion no permitida", 2, null);
         }
     }//GEN-LAST:event_jButton6ActionPerformed
 
-    private void jTextField4KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField4KeyTyped
+    private void soloNumeros(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_soloNumeros
         // TODO add your handling code here:
-        soloNumeros(evt);
-    }//GEN-LAST:event_jTextField4KeyTyped
-
-    private void jTextField5KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField5KeyTyped
-        // TODO add your handling code here:
-        soloNumeros(evt);
-    }//GEN-LAST:event_jTextField5KeyTyped
-
-    private void jTextField9KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField9KeyTyped
-        // TODO add your handling code here:
-        soloNumeros(evt);
-    }//GEN-LAST:event_jTextField9KeyTyped
-
-    private void jTextField12KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField12KeyTyped
-        // TODO add your handling code here:
-        soloNumeros(evt);
-    }//GEN-LAST:event_jTextField12KeyTyped
-
-    private void jTextField11KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField11KeyTyped
-        // TODO add your handling code here:
-        soloNumeros(evt);
-    }//GEN-LAST:event_jTextField11KeyTyped
-
-    private void jTextField16KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField16KeyTyped
-        // TODO add your handling code here:
-        soloNumeros(evt);
-    }//GEN-LAST:event_jTextField16KeyTyped
-
-    private void jTextField17KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField17KeyTyped
-        // TODO add your handling code here:
-        soloNumeros(evt);
-    }//GEN-LAST:event_jTextField17KeyTyped
-
-    private void jTextField19KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField19KeyTyped
-        // TODO add your handling code here:
-        soloNumeros(evt);
-    }//GEN-LAST:event_jTextField19KeyTyped
-
-    private void jTextField20KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField20KeyTyped
-        // TODO add your handling code here:
-        soloNumeros(evt);
-    }//GEN-LAST:event_jTextField20KeyTyped
-
-    private void jTextField18KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField18KeyTyped
-        // TODO add your handling code here:
-        soloNumeros(evt);
-    }//GEN-LAST:event_jTextField18KeyTyped
-
-    private void jTextField22KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField22KeyTyped
-        // TODO add your handling code here:
-        soloNumeros(evt);
-    }//GEN-LAST:event_jTextField22KeyTyped
-
-    private void jTextField2KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField2KeyTyped
-        // TODO add your handling code here:
-        soloLetras(evt);
-    }//GEN-LAST:event_jTextField2KeyTyped
-
-    private void jTextField7KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField7KeyTyped
-        // TODO add your handling code here:
-        soloLetras(evt);
-    }//GEN-LAST:event_jTextField7KeyTyped
-
-    private void jTextField8KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField8KeyTyped
-        // TODO add your handling code here:
-        soloLetras(evt);
-    }//GEN-LAST:event_jTextField8KeyTyped
-
-    private void jTextField21KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField21KeyTyped
-        // TODO add your handling code here:
-        soloLetras(evt);
-    }//GEN-LAST:event_jTextField21KeyTyped
-
-    private void jTable1MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable1MouseReleased
-        // TODO add your handling code here:
-        if (jTable1.getSelectedRow() >= 0) {
-            Cliente cliente = new Cliente();
-            if (jTextField1.getText().equals("")) {
-                cliente = controlador.getClientes().get(jTable1.getSelectedRow());
-            } else {
-                //editar busqueda
-                int index = controlador.getClientes().indexOf(controlador.getClientesBusqueda().get(jTable1.getSelectedRow()));
-                cliente = controlador.getClientes().get(index);
-            }
-            jTextField25.setText(cliente.getMercado_salud());
-            jTextField26.setText(cliente.getTipo_documentacion());
-            jTextField27.setText(cliente.getFecha_entrega());
+        char caracter = evt.getKeyChar();
+        if (((caracter < '0') || (caracter > '9')) && (caracter != '\b')) {
+            Toolkit.getDefaultToolkit().beep();
+            evt.consume();
         }
-    }//GEN-LAST:event_jTable1MouseReleased
+    }//GEN-LAST:event_soloNumeros
+
+    private void soloLetras(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_soloLetras
+        // TODO add your handling code here:
+        char caracter = evt.getKeyChar();
+        if (!Character.isLetter(caracter) && !(caracter == KeyEvent.VK_SPACE) && !(caracter == KeyEvent.VK_BACK_SPACE)) {
+            Toolkit.getDefaultToolkit().beep();
+            evt.consume();
+        }
+    }//GEN-LAST:event_soloLetras
 
     private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
         // TODO add your handling code here:
@@ -1695,7 +1616,7 @@ public class Principal extends javax.swing.JFrame implements Serializable, Runna
 //            actualizarTablaAtencionCliente();
 //            actualizarTablaCliente();
         } else {
-            System.out.println("Debe seleccionar una fila");
+            JOptionPane.showMessageDialog(null,"Debe seleccionar algun elemento en la lista", "Accion no permitida", 2, null);
         }
     }//GEN-LAST:event_jButton10ActionPerformed
 
@@ -1735,6 +1656,18 @@ public class Principal extends javax.swing.JFrame implements Serializable, Runna
         jTextArea1.setText("");
         SalidaPDF.setVisible(false);
     }//GEN-LAST:event_jButton12ActionPerformed
+
+    private void jTextField1KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField1KeyReleased
+        // TODO add your handling code here:
+        String criterio = jTextField1.getText();
+        controlador.buscar(criterio.toLowerCase());
+        actualizarTablaAtencionClienteBusqueda();
+        actualizarTablaClienteBusqueda();
+    }//GEN-LAST:event_jTextField1KeyReleased
+
+    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField1ActionPerformed
 
     private void limpiarDatos() {
         jTextField2.setText("");
@@ -1802,22 +1735,6 @@ public class Principal extends javax.swing.JFrame implements Serializable, Runna
         jTextField22.setText(cliente.getNumero_tarjeta());
         jTextField23.setText(cliente.getFecha_expira());
         jTextField24.setText(cliente.getCvc());
-    }
-
-    private void soloNumeros(KeyEvent e) {
-        char caracter = e.getKeyChar();
-        if (((caracter < '0') || (caracter > '9')) && (caracter != '\b')) {
-            Toolkit.getDefaultToolkit().beep();
-            e.consume();
-        }
-    }
-
-    private void soloLetras(KeyEvent e) {
-        char caracter = e.getKeyChar();
-        if (!Character.isLetter(caracter) && !(caracter == KeyEvent.VK_SPACE) && !(caracter == KeyEvent.VK_BACK_SPACE)) {
-            Toolkit.getDefaultToolkit().beep();
-            e.consume();
-        }
     }
 
     /**
