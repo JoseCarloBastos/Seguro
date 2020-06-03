@@ -198,7 +198,8 @@ public class ClienteController {
         Iterator iter = clientes.iterator();
         while (iter.hasNext()) {
             Cliente temp = (Cliente) iter.next();
-            if (temp.getNombre().toLowerCase().contains(criterio)
+            if (    
+                       temp.getNombre().toLowerCase().contains(criterio)
                     || temp.getFech_nacimiento().toLowerCase().contains(criterio)
                     || temp.getSocialSecurity().toLowerCase().contains(criterio)
                     || temp.getTelefono().toLowerCase().contains(criterio)
@@ -228,7 +229,7 @@ public class ClienteController {
                     || temp.getNumero_tarjeta().toLowerCase().contains(criterio)
                     || temp.getFecha_expira().toLowerCase().contains(criterio)
                     || temp.getCvc().toLowerCase().contains(criterio)
-                    || temp.getMercado_salud().toLowerCase().contains(criterio)) {
+                ) {
                 clientesBusqueda.add(temp);
             }
         }
